@@ -29,7 +29,8 @@
       .gnb_wrap{
         height: 5.6rem;
     box-shadow: 0 2px 4px 0 rgba(138, 149, 158, 0.15);
-    border-top: 1px solid #f3f8f9;
+    border-top: 1px; solid #f3f8f9;
+    background-color: #ffffff;
       }
       .gnb_list>li{
         width: 33.33%;
@@ -104,13 +105,14 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     list-style: none;
     height: 6.4rem;
     border-top: 1px solid #e1e1e1;
     background: white;
+    text-align: center;
 }
 .foot_menu_list .link{
   display: flex;
@@ -146,7 +148,7 @@
 }
 .foot_sns_list{
   display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     margin: 0;
     padding: 0;
@@ -178,18 +180,27 @@
   font-size: 1.2rem;
   color: #2b2b2b;
 }
+.foot_menu_list_wrap{
+  width: 100%;
+  overflow: scroll;
+  scrollbar-width: none;
+}
 .foot_copyright_wrap{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 4rem;
+  height: 10rem;
   background-color: white;
   font-size: 1rem;
   color: #a0a0a0;
+  margin-top: 0rem;
 }
-.btn_top .show{
+.btn_topshow{
   display: block;
 
+}
+.btn_topshow.icon{
+  height: 5.8rem;
 }
 .btn_top{
   position: fixed;
@@ -299,11 +310,20 @@ a:visited{
   font-weight: 700;
   
 }
+.header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
     </style>
   </head>
 
   <body>
-    <header>
+    <header class="header">
+      
     <div class="top_wrap">
       <a href="#">
         <img src="image/papaicon.png" alt="파파존스 로고" class="icon_logo">
@@ -318,6 +338,7 @@ a:visited{
         <img src="image/메뉴아이콘.png" alt="메뉴아이콘" class="icon">
       </button>
     </div>
+  
     <div class="gnb_wrap">
       <ul class="gnb_list">
         <li>
@@ -326,7 +347,7 @@ a:visited{
         <li>
           <a href="#" class="link">이벤트/할인</a>
         </li>
-        <li></li>
+        <li>
           <a href="#" class="link">E-쿠폰주문</a>
         </li>
       </ul>
@@ -423,19 +444,19 @@ a:visited{
     <div class="foot_menu_list_wrap">
       <ul class="foot_menu_list">
         <li>
-          <div>
+          
           <a href="#" class="link">고객센터</a>
-        </div>
+      
         </li>
         <li>
-          <div>
+          
           <a href="#" class="link">개인정보처리방침</a>
-        </div>
+        
         </li>
         <li>
-          <div>
+          
           <a href="#" class="link">위치기반서비스</a>
-        </div>
+        
         </li>
       </ul>
     </div>
@@ -461,22 +482,22 @@ a:visited{
     </ul>
     <ul class="foot_sns_list">
       <li>
-        <a href="facebook" onclick="widow.open">
+        <a href="facebook" onclick="window.open">
           <img src="image/페북아이콘.png" alt="" class="icon">
         </a>
       </li>
       <li>
-        <a href="blog" onclick="widow.open">
+        <a href="blog" onclick="window.open">
           <img src="image/블로그아이콘.png" alt="" class="icon">
         </a>
       </li>
       <li>
-        <a href="instargram" onclick="widow.open">
+        <a href="instargram" onclick="window.open">
           <img src="image/인스타아이콘.png" alt="" class="icon">
         </a>
       </li>
       <li></li>
-        <a href="p" onclick="widow.open">
+        <a href="p" onclick="window.open">
           <img src="image/p아이콘.png" alt="" class="icon">
         </a>
       </li>
