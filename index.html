@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="shortcut icon" href="images/aurora.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <link rel="shortcut icon" href="image/image.png" type="image/x-icon" />
+
+    <title>파파존스-Better Ingredients.</title>
+    <style>
+      .top_wrap{
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 5.6rem;
+        border-top: 1px solid #e1e1e1;
+        background: #ffffff;
+        z-index: 3;
+        
+      }
+      .gnb_wrap{
+        height: 5.6rem;
+    box-shadow: 0 2px 4px 0 rgba(138, 149, 158, 0.15);
+    border-top: 1px solid #f3f8f9;
+      }
+      .gnb_list>li{
+        width: 33.33%;
+        text-align: center;
+      }
+      .gnb_list.link{
+        display: block;
+    width: 100%;
+    height: 5.6rem;
+    line-height: 5.6rem;
+    color: #000000;
+    font-weight: 500;
+    font-size: 1.6rem;
+      }
+      .gnb_list{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0;
+        padding: 50px;
+        list-style: none;
+        height: 100%;
+      }
+      .main_order_type_wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0.8rem -0.4rem 0;
+      }
+      .btn_order_type{
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 7.6rem;
+        margin: 0 0.4rem;
+        padding: 0;
+        background-color:#da291c ;
+        box-shadow: 0 2px 4px 0 rgba(138,149,158,0.15);
+        border-radius: 1rem;
+        border: 0;
+        outline: 0;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: white;
+      }
+      .btn_link{
+        flex: 1;
+    height: 5rem;
+    margin: 0 0.4rem;
+    padding: 0;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px 0 rgba(138, 149, 158, 0.15);
+    border: 0;
+    outline: 0;
+    font-size: 1.2rem;
+    color: #000000;
+    text-align: center;
+      }
+     .main_link_wrap{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0.8rem -0.4rem 0;
+     }
+*{
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.foot_menu_list {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 6.4rem;
+    border-top: 1px solid #e1e1e1;
+    background: white;
+}
+.foot_menu_list .link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 1.4rem;
+  color: #2b2b2b;
+}
+.foot_phone_list{
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: white;
+}
+.foot_menu_list > li:first-child{
+  border-left:0;
+}
+.foot_phone_list > li{
+  flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6.3rem;
+    border: 1px solid #e1e1e1;
+    border-right: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2b2b2b;
+}
+.foot_sns_list{
+  display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background: white;
+}
+.foot_sns_list > li{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7.2rem
+}
+.foot_company_wrap{
+  padding: 1.6rem;
+  background-color: #a5a2a2;
+}
+.foot_company_wrap .company{
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #2b2b2b;
+  margin-bottom: 0.8rem;
+}
+.foot_company_wrap .company_info_list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #2b2b2b;
+}
+.foot_copyright_wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  background-color: white;
+  font-size: 1rem;
+  color: #a0a0a0;
+}
+.btn_top .show{
+  display: block;
+
+}
+.btn_top{
+  position: fixed;
+    right: 1rem;
+    bottom: 7.8rem;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+}
+.quick_bottom_wrap{
+  position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0 0 0 0;
+    width: 100%;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background: #ffffff;
+    z-index: 1;
+}
+.quick_bottom_list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+.quick_bottom_list>li{
+  display: flex;
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+}
+.icon_logo{
+  position: relative;
+  margin: 0 1.6rem;
+  height: 3.2rem;
+  z-index: 99;
+}
+.top_wrap.top_addr{  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 0 56px 0 108px;
+  width: 100%;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.top_wrap.주소등록 #setaddress{
+  font-weight: 700;
+    display: inline-block;
+    overflow: hidden;
+    max-width: 200px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 100%;
+    min-width: 60px;
+}
+.top_wrap.top_주소등록.icon2{
+  height: 1.8rem;
+  margin-right: 0.4rem;
+}
+#setaddress.no_hidden{
+  width: auto;
+}
+.img {
+    vertical-align: middle;
+    border-style: none;
+}
+.btn_lnb_menu{
+  position: absolute;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    z-index: 99;
+}
+.btn_lnb_menu .icon{
+  height: 5.6rem;
+}
+a:visited{
+  text-decoration: none;
+    color: #000;
+    background-color: transparent;
+}
+.top_wrap.icon_logo{
+  position: relative;
+    margin: 0 1.6rem;
+    height: 3.2rem;
+    z-index: 99;
+}
+.addre{
+  margin: auto;
+}
+.icon2{
+  height: 20px;
+}
+.no_hidden{
+  font-weight: 700;
+  
+}
+    </style>
+  </head>
+
+  <body>
+    <header>
+    <div class="top_wrap">
+      <a href="#">
+        <img src="image/papaicon.png" alt="파파존스 로고" class="icon_logo">
+      </a>
+      
+       <a href="#" class="addre">
+        <img src="image/위치아이콘.png" alt="위치아이콘" class="icon2">
+        <span id="setaddress" class="no_hidden">기본 주소를 등록해 주세요.</span>
+      </a>
+    
+      <button type="button" class="btn_lnb_menu" onclick="window.open('로그인.html','_blank')">
+        <img src="image/메뉴아이콘.png" alt="메뉴아이콘" class="icon">
+      </button>
+    </div>
+    <div class="gnb_wrap">
+      <ul class="gnb_list">
+        <li>
+          <a href="#" class="link">메뉴</a>
+        </li>
+        <li>
+          <a href="#" class="link">이벤트/할인</a>
+        </li>
+        <li></li>
+          <a href="#" class="link">E-쿠폰주문</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <!-- 상단끝 홈시작 -->
+    <div class="content_box">
+      <div class="캐러셀"></div>
+    </div>
+    <div
+    id="carouselExample"
+    class="carousel slide"
+    data-bs-ride="carousel"
+    data-bs-interval="1500"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+        
+      </div>
+      <div class="carousel-item active">
+        <img src="image/핫블라스트.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="image/기부투게더.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="image/엘지고객할인.jpg" class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="image/포토카드증정.jpeg" class="d-block w-100" alt="..." />
+      </div>
+    </div>
+  </div>
+  <!-- 배달 주문/ 포장주문 -->
+   <section class="main_order_type_wrap">
+    <button class="btn_order_type" onclick="clickorderview">
+      <img src="image/오토바이배달.png" alt="오토바이아이콘" class="icon">
+      <span class="text">배달주문</span>
+      <img src="image/주문이동1.png" alt="주문이동아이콘" class="arrow">
+    </button>
+    <button class="btn_order_type" onclick="clickorderview">
+      <img src="image/포장주문.png" alt="포장주문아이콘">
+      <span class="text">포장주문</span>
+      <img src="image/주문이동1.png" alt="주문이동">
+    </button>
+   </section>
+   <section class="main_link_wrap">
+    <button class="btn_link" onclick="location.href">
+      <img src="image/이벤트.png" alt="이벤트아이콘" class="icon">
+      <span>이벤트</span>
+    </button>
+    <button class="btn_link" onclick="location.href">
+      <img src="image/제휴할인.png" alt="할인아이콘" class="icon">
+      <span>제휴할인</span>
+    </button>
+   </section>
+   <section class="main_link_wrap">
+    <button class="btn_link" onclick="location.href">
+      <img src="image/e쿠폰.png" alt="쿠폰주문" class="icon">
+      <span>E-쿠폰주문</span>
+    </button>
+    <button class="btn_link" onclick="location.href">
+      <img src="image/매장찾기.png" alt="매장찾기아이콘" class="icon">
+      <span>매장찾기</span>
+    </button>
+   </section>
+   <footer>
+    <div class="foot_menu_list_wrap">
+      <ul class="foot_menu_list">
+        <li>
+          <div>
+          <a href="#" class="link">고객센터</a>
+        </div>
+        </li>
+        <li>
+          <div>
+          <a href="#" class="link">개인정보처리방침</a>
+        </div>
+        </li>
+        <li>
+          <div>
+          <a href="#" class="link">위치기반서비스</a>
+        </div>
+        </li>
+      </ul>
+    </div>
+    <ul class="foot_phone_list">
+      <li>
+        <div>
+          <span class="name">콜센터주문</span>
+        <span class="value">1577-8080</span>
+      </div>
+      </li>
+      <li>
+        <div>
+          <span class="name">온라인이용문의</span>
+      <span class="value">1566-0889</span>
+    </div>
+  </li>
+      <li>
+        <div>
+          <span class="name">고객센터</span>
+          <span class="value">1577-8142</span>
+        </div>
+      </li>
+    </ul>
+    <ul class="foot_sns_list">
+      <li>
+        <a href="facebook" onclick="widow.open">
+          <img src="image/페북아이콘.png" alt="" class="icon">
+        </a>
+      </li>
+      <li>
+        <a href="blog" onclick="widow.open">
+          <img src="image/블로그아이콘.png" alt="" class="icon">
+        </a>
+      </li>
+      <li>
+        <a href="instargram" onclick="widow.open">
+          <img src="image/인스타아이콘.png" alt="" class="icon">
+        </a>
+      </li>
+      <li></li>
+        <a href="p" onclick="widow.open">
+          <img src="image/p아이콘.png" alt="" class="icon">
+        </a>
+      </li>
+    </ul>
+    <div class="foot_company_wrap">
+      <div class="company">한국파파존스(주)</div>
+      <ul class="company_info_list">
+        <li>
+          <span>서울시 강남구 압구정로 210 융기빌딩 4층 우)06022</span>
+        </li>
+        <li>
+          <span>Tel:1577-8080 &nbsp;&nbsp;</span>
+          <span>Fax:02-515-8448</span>
+        </li>
+        <li>
+          <span>대표이사: 서창우 &nbsp;&nbsp;</span>
+          <span>개인정보관리 책임자: 전용관</span>
+        </li>
+        <li>
+          <span>통신판매신고:강남11495호 &nbsp;&nbsp;</span>
+          <span>사업자등록번호:211-87-25621</span>
+        </li>
+      </ul>
+    </div>
+    <div class="foot_copyright_wrap">
+      <span>COPYRIGHT&#169 2020PAPAJOHNS.ALL RIGHTS RESERVER</span>
+    </div>
+    <button class="btn_top show">
+      <img src="image/탑쇼버튼.png" alt="" class="icon" style="height: 5.8rem;">
+    </button>
+   </footer>
+   <div class="quick_bottom_wrap">
+    <ul class="quick_bottom_list">
+      <li>
+        <a href="#" class="link off" onclick="checkloginother">
+          <img src="image/멤버십아이콘.png" class="icon off" alt="">
+          <span class="text">멤버십</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="checkloginother" class="link off">
+          <img src="image/할인.png" class="icon off" alt="">
+          <span class="text">쿠폰함</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="checkloginother" class="link">
+          <img src="image/피자아이콘.png" alt="" class="icon" height="30px">
+          <span class="text">피자주문</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="checkloginother" class="link off">
+          <img src="image/주문내역.png" class="icon off" alt="" height="40px">
+          <span class="text">주문내역</span>
+        </a>
+      </li>
+      <li>
+        <a href="#" onclick="checkloginother" class="link off">
+          <img src="image/장바구니.png" class="icon off" alt="" height="50px">
+          <span class="text">장바구니</span>
+        </a>
+      </li>
+    </ul>
+   </div>
+  </body>
+</html>
